@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+    .content {
+        align-content: center;
+        margin-top: 5%;
+        border-radius: 15px;
+        margin-left: 10%;
+        background: whitesmoke;
+        padding: 30px;
+        min-width: 300px;
+        box-shadow: 3px 3px 5px 6px  rgb(213, 241, 243);
+    }
+    .main {
+        border-radius: 15px;
+        padding: 30px;
+        align-content: center;
+        min-width:250px;
+        min-height:250px;
+        background-color: #abf;
+    }
+    /* .main button{
+        border-width: none;
+        border-radius:10px;
+        justify-content:center;
+        height: fit-content;
+        padding:15px;
+        background: rgb(50, 50, 209);
+        color:black */
+    /* } */
+    button a {
+        color:black;
+        padding:5px;
+        border-radius:10px;
+         background: rgb(122, 228, 122);
+        font-size:20px;
+        margin-bottom: 5px;
+    }
+    a:hover {
+        text-decoration: none;
+        color: white;
+    }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>CONTACT US</h1>
+        <div class="main">
+            <h3>For more information or any question </br>
+            contact us on the following contacts:</h3></br>email: habajeunes2@gmail.com</br>
+            whatsapp:        +250722635969</br>
+            Facebook:        habumugisha ami des jeunes</br>
+            Instagram:       habumugisha ami des jeunes</br>
+            call us :        <button><a href="tel:+250722635969">+250722635969</a></button>
+
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

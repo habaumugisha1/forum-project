@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Forum</h1>
+
+    <table border="1" align-content= "center" >
+        <thead>
+            <tr>
+                <th>Forum</th>
+                <th>Posts</th>
+                <th>Topics</th>
+                <th>Last Post</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for forum in boards %}
+            <tr>
+                <td>
+                    {{ forum.name }}<br>
+                    <small style="color: #888">{{ forum.description }}</small>
+                </td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>
+
+{% endblock %}

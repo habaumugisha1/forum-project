@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+    /* .show {
+        width:100%;
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        background: grey;
+        box-shadow: 2px 2px 2px 2px rgb(255, 255, 184)
+    }
+    ul img {
+        float:left;
+    } */
+    </style>
+</head>
+<body>
+    <div>
+        
+        <ul class="show">
+            {% for portfolio in portfolios %}
+            <h2>{{portfolio.title}}</h2>
+            <img src="{{portfolio.image.url}}" alt="image" class="img-fluid" width="400" /></br>
+            <h4>{{portfolio.description}}</h4>
+            <p>Posted by {{request.user.get_full_name}} at {{portfolio.created_at}}.</p></br>
+            {% endfor %}
+        </ul>
+        
+    </div>
+</body>
+</html>
+{% endblock %}
