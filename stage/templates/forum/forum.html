@@ -6,15 +6,24 @@
 
 <head>
     <meta charset="utf-8">
+    <style>
+    h1 {
+       margin-top:20px;
+       border-radius:10px;
+    }
+    table {
+        margin-left: 60px;
+    }
+    </style>
 </head>
 
 <body>
 
-<h1 style="text-align:center; background-color: gray"; width="70%"; border-radius="10px"; margin-top="20px">Forums</h1>
+<h1 style="text-align:center; background-color: gray"; width="70%";  margin-top="20px" >Forums</h1>
     <table border ="1" align-content= "center" float="center" width="70%">
         <thead style="background-color: black; color: white">
             <tr>
-                <th style="border: none; align-content: center">Forum</th>
+                <th style="border: none" align-content= "center">Forum</th>
                 <th style="border: none" width: 40>Posts</th>
                 <th style="border: none" width: 40>Topics</th>
                 <th style="border: none" width: 70>Last Post</th>
@@ -24,7 +33,7 @@
             {% for forum in forums %}
             <tr>
                 <td width="300" style="border: none">
-                  <b> {{ forum.name }}</b><br>
+               <a href=""><b>{{ forum.name }}</b></a></br>  
                     <small>{{ forum.description }}</small>
                 <!-- </td style="border: none" width: 40></br> -->
                 <td style="border: none" width: 40>0</td>

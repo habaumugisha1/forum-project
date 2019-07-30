@@ -21,17 +21,23 @@
     </style>
 </head>
 <body>
-    <div>
-        
-        <ul class="show">
+    <div class="row">
+
             {% for portfolio in portfolios %}
-            <h2>{{portfolio.title}}</h2>
-            <img src="{{portfolio.image.url}}" alt="image" class="img-fluid" width="400" /></br>
-            <h4>{{portfolio.description}}</h4>
-            <p>Posted by {{request.user.get_full_name}} at {{portfolio.created_at}}.</p></br>
+            <div class="col-lg-6 mt-2">
+                <div class="card-deck">
+                    <div class="card">
+                        {{portfolio.title}}
+                        <img src="{{portfolio.image.url}}" alt="image" class="img-fluid" width="400" /></br>
+                            <div class="card-body">
+                                    <h4 class="card-title">{{portfolio.description}}</h4>
+                                    <p class="card-title">Posted by {{request.user.get_full_name}} at {{portfolio.created_at}}.</p></br>
+                            </div>
+                   </div>
+                </div>
+
+            </div>
             {% endfor %}
-        </ul>
-        
     </div>
 </body>
 </html>
